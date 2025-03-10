@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #DDA0DD;
+            --secondary-color: #D080D0;
+            --background-color: #f4f7fc;
+            --white-color: white;
+            --text-color: #333;
+            --footer-color: #DDA0DD;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            padding: 60px;
+            width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .transcription-box {
+            margin-bottom: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            resize: none;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+        }
+
+        .back-btn a {
+            color: var(--primary-color);
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .back-btn a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--footer-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Transcription Result</h1>
+        <div class="transcription-box">
+            <p><strong>Transcription:</strong></p>
+            <textarea readonly>{{ transcription }}</textarea>
+        </div>
+        <div class="back-btn">
+            <a href="/">Back to Upload</a>
+        </div>
+        <div class="footer">
+            <p><a >EchoChasers</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
